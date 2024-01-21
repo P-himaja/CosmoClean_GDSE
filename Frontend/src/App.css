@@ -365,6 +365,7 @@ blockquote {
   height: auto;
   object-fit: cover;
   border-radius: 10px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;;
 }
 
 .text-container-home {
@@ -405,6 +406,7 @@ blockquote {
   width: 150px;
   margin-top: 2em;
   margin-bottom: 2em;
+  box-shadow: 10px 10px 5px lightblue;
 }
 
 /* Meme Page */

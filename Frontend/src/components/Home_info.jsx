@@ -1,29 +1,29 @@
 import React, { Component, useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import image1 from "../images/home1-min.jpeg";
-import image2 from "../images/home2-min.jpeg";
-import image3 from "../images/home3-min.jpeg";
+import image1 from "../images/we do.png";
+import image2 from "../images/prediction.png";
+import image3 from "../images/effect.jpg";
 
 const contentData = [
   {
     imageSrc:
     image1,
-    title: "Who We Are",
-    text: "Discover more about our organization and learn about our mission and initiatives to make a positive impact on mental health and well-being.",
+    title: "What are space debris and what does we do",
+    text: "Discover more about space junk and learn about our mission to help collisionless landing of our spacecrafts.",
     link: "/Volunteer",
   },
   {
     imageSrc:
       image2,
-    title: "Take Our Diagnostic Quizzes",
-    text: "Discover our diagnostic quizzes designed to help you evaluate your mental well-being. Take a moment to explore and gain insights into your mental health.",
+    title: "what if space debris never comes to an end",
+    text: "Discover our space debris prediction model.Take a moment to explore and gain insights into upcoming increase of the space junk.",
     link: "/Quiz",
   },
   {
     imageSrc:
       image3,
-    title: "Mental Disorders",
-    text: "Discover valuable insights into mental disorders and their impact on individuals and society. Explore our dedicated page to learn more about mental health challenges and ways to address them.",
+    title: "Effects and Solutions to all these queries",
+    text: "Discover valuable awareness about the effects of hazards to the spacecrafts by debris. Explore our dedicated page to learn soloutions and giving suggestions for the problem .",
     link: "/Articles",
   },
 ];
