@@ -8,22 +8,22 @@ const contentData = [
   {
     imageSrc:
     image1,
-    title: "What are space debris and what does we do",
+    title: "What do we do ?",
     text: "Discover more about space junk and learn about our mission to help collisionless landing of our spacecrafts.",
     link: "/Volunteer",
   },
   {
     imageSrc:
       image2,
-    title: "what if space debris never comes to an end",
-    text: "Discover our space debris prediction model.Take a moment to explore and gain insights into upcoming increase of the space junk.",
+    title: "Space Debris ",
+    text: "Unveil the trajectory of celestial fragments and glimpse the potential scenarios that await if we don't navigate this challenge",
     link: "/Quiz",
   },
   {
     imageSrc:
       image3,
-    title: "Effects and Solutions to all these queries",
-    text: "Discover valuable awareness about the effects of hazards to the spacecrafts by debris. Explore our dedicated page to learn soloutions and giving suggestions for the problem .",
+    title: "Effects and Solutions ",
+    text:"Embark on a cosmic exploration and dive into some major effects of space debris, unraveling its impact on satellite technology and space missions through us.",
     link: "/Articles",
   },
 ];
@@ -61,13 +61,13 @@ function Home_info() {
           <div className="text-container-home">
             <TextWrapper>
               <div className="text-box-home">
-                <h2>{content.title}</h2>
+                <h2 className="gradient-text">{content.title}</h2>
                 <p>{content.text}</p>
                 <a
                   href={content.link}
                   rel="noopener noreferrer"
                 >
-                  Learn more
+                Learn more → 
                 </a>
               </div>
             </TextWrapper>

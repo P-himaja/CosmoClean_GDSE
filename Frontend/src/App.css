@@ -2,10 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:"Segoe UI","Noto Sans","Helvetica","Arial","sans-serif","Apple Color Emoji","Segoe UI Emoji";
+  font-family:"CerebriSans-Regular", "-apple-system", "system-ui", "Roboto", "sans-serif";
+  /* font-family:"Segoe UI","Noto Sans","Helvetica","Arial","sans-serif","Apple Color Emoji","Segoe UI Emoji"; */
 --space:"../images/space.jpg";
 }
-
+.body{
+  background-color: rgba(30, 32, 44, 0.95);
+}
 h1 {
   color: white;
   font-size: 3.25em;
@@ -14,11 +17,11 @@ h1 {
   text-align: center;
 }
 
-h2 {
+/* h2 {
   color: #002c66;
   font-size: 2em;
   text-align: center;
-}
+} */
 
 h3 {
   color: #002c66;
@@ -186,6 +189,7 @@ position: relative;
 
 .dropdown.show {
   display: block;
+  
 }
 
 .dropdown .dropdown-submenu {
@@ -210,8 +214,12 @@ position: relative;
 }
 
 .content a {
-  color: #cc3852;
+  color: rgb(4, 4, 65);
   margin-right: 10px;
+  font-weight: 300;
+}
+.content a:hover{
+text-decoration: underline;
 }
 
 .auth-links {
@@ -342,6 +350,9 @@ blockquote {
 
 .container-home {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .content-section-home {
@@ -353,8 +364,15 @@ blockquote {
 }
 
 .image-container-home {
+  
   position: relative; /* Added positioning for overlay */
+ 
   max-width: 100%;
+  
+  
+  margin-bottom: 20px;
+ top:30px;
+
 }
 
 .image-home {
@@ -364,8 +382,8 @@ blockquote {
   width: 25%;
   height: auto;
   object-fit: cover;
-  border-radius: 10px;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;;
+  
+ border-radius: 14px;
 }
 
 .text-container-home {
@@ -378,14 +396,24 @@ blockquote {
 }
 
 .text-box-home {
-  background-color: #f9f9f9;
-  border-radius: 10px;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.477) 5px 5px 7px ;
+  
   padding: 20px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  
 }
-
+.gradient-text{
+  background-image: linear-gradient(#bbe7fc 30%, #0a166a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 250%;
+    transition: 500ms background-position;
+   font-size: 38px;
+   margin-bottom: 20px;
+}
 .text-box-home p {
   margin-bottom: 15px;
+  color: rgb(8, 8, 67);
 }
 
 .home-logoslider-mainContainer {
