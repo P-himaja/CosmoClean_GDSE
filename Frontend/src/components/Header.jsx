@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
-import logo from "../images/logo11.jpg";
+import logo from "../images/logo11.png";
 
 const Header = () => {
   return (

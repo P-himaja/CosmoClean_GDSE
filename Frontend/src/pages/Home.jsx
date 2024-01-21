@@ -27,7 +27,7 @@ const Home = () => {
       <div className="home-content">
      <div className="space-pic">
       <div class="text">
-        <h1>Space Debris </h1>
+        <h1>Cosmo Clean</h1>
         <p>The escalating volume of space debris poses a critical global challenge and thus demands immediate attention.By acknowledging the gravity of the situation we are on a mission to safeguard new space sexplorations.</p>
       </div>
      
