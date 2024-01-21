@@ -18,38 +18,38 @@ const getMenuItems = () => {
       title: 'Home',
       url: '/',
     },
-    {
-      title: 'Resources',
-      submenu: [
-        {
-          title: 'Articles',
-          url: 'articles',
-        },
-        {
-          title: 'Initiatives',
-          url: 'initiatives',
-        },
-      ],
-    },
+    // {
+    //   title: 'Resources',
+    //   submenu: [
+    //     {
+    //       title: 'Articles',
+    //       url: 'articles',
+    //     },
+    //     {
+    //       title: 'Initiatives',
+    //       url: 'initiatives',
+    //     },
+    //   ],
+    // },
     {
       title: 'Social',
-      submenu: [
-        {
-          title: 'Blogs',
-          url: 'blogs',
-        },
-        {
-          title: 'Quiz',
-          url: 'quiz',
-        },
-        {
-          title: 'Relax',
-          url: 'relax',
-        },
-        { title: 'Therapy',
-          url: 'therapy'
-        },
-      ],
+      // submenu: [
+      //   {
+      //     title: 'Blogs',
+      //     url: 'blogs',
+      //   },
+      //   // {
+      //   //   title: 'Quiz',
+      //   //   url: 'quiz',
+      //   // },
+      //   {
+      //     title: 'Relax',
+      //     url: 'relax',
+      //   },
+      //   { title: 'Therapy',
+      //     url: 'therapy'
+      //   },
+      // ],
     },
     {
       title: 'Contact',
