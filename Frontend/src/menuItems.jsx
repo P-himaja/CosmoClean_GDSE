@@ -18,8 +18,8 @@ const getMenuItems = () => {
       title: 'Home',
       url: '/',
     },
-    // {
-    //   title: 'Resources',
+    {
+      title: 'Resources',
     //   submenu: [
     //     {
     //       title: 'Articles',
@@ -30,7 +30,7 @@ const getMenuItems = () => {
     //       url: 'initiatives',
     //     },
     //   ],
-    // },
+    },
     {
       title: 'Social',
       // submenu: [
