@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { signOut } from "firebase/auth";
 import { auth } from "./components/firebase-config";
 
@@ -20,36 +20,15 @@ const getMenuItems = () => {
     },
     {
       title: 'Resources',
-    //   submenu: [
-    //     {
-    //       title: 'Articles',
-    //       url: 'articles',
-    //     },
-    //     {
-    //       title: 'Initiatives',
-    //       url: 'initiatives',
-    //     },
-    //   ],
     },
     {
       title: 'Social',
-      // submenu: [
-      //   {
-      //     title: 'Blogs',
-      //     url: 'blogs',
-      //   },
-      //   // {
-      //   //   title: 'Quiz',
-      //   //   url: 'quiz',
-      //   // },
-      //   {
-      //     title: 'Relax',
-      //     url: 'relax',
-      //   },
-      //   { title: 'Therapy',
-      //     url: 'therapy'
-      //   },
-      // ],
+      submenu: [
+        {
+          title: 'Blogs',
+          url: 'blogs',
+        },
+      ],
     },
     {
       title: 'Contact',

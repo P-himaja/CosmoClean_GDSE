@@ -42,7 +42,7 @@ const ContactUs = () => {
         <h2>Contact Us</h2>
         <div className="address">
           <div className="icon">
-            <a href="https://maps.app.goo.gl/s2nv5jDxxppvi5Z6A" target="_blank" rel="noopener noreferrer">
+            <a href="https://maps.app.goo.gl/ra1yTAmHCYDvCrrV6" target="_blank" rel="noopener noreferrer">
               <i className="fa fa-map-marker"></i>
             </a>
           </div>
@@ -58,7 +58,7 @@ const ContactUs = () => {
           <div className="icon">
             <i className="fa fa-envelope"></i>
           </div>
-          <p>BrainPeace@gmail.com</p>
+          <p> CosmoClean@gmail.com</p>
         </div>
         <div className="social-icons">
           <a href="#" className="icon">
@@ -67,7 +67,7 @@ const ContactUs = () => {
           <a href="#" className="icon">
             <i className="fa fa-twitter"></i>
           </a>
-          <a href="https://www.instagram.com/sukoonformentalhealth/" target="_blank" rel="noopener noreferrer" className="icon">
+          <a href="#" target="_blank" rel="noopener noreferrer" className="icon">
             <i className="fa fa-instagram"></i>
           </a>
         </div>
