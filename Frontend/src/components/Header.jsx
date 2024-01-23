@@ -5,7 +5,7 @@ import logo from "../images/logo11.png";
 const Header = () => {
   return (
     <header>
-      <div class="wrap">
+      <div className="wrap">
 
       <div className="nav-area">
         <Link to="/" className="logo">

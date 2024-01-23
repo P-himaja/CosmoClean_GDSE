@@ -154,12 +154,6 @@ position: relative;
   color: white;
 }
 
-.menu-items a:hover{
-  
-}
-.menu-items button:hover {
- 
-}
 
 .arrow::after {
   content: "";
@@ -404,6 +398,7 @@ blockquote {
 }
 .gradient-text{
   background-image: linear-gradient(#bbe7fc 30%, #0a166a 100%);
+  background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 250%;

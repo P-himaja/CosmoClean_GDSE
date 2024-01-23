@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect, useRef } from "react";
+import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import image1 from "../images/we do.png";
 import image2 from "../images/prediction.png";
