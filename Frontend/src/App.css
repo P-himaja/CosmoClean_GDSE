@@ -3,8 +3,15 @@
   padding: 0;
   box-sizing: border-box;
   font-family:"CerebriSans-Regular", "-apple-system", "system-ui", "Roboto", "sans-serif";
-  /* font-family:"Segoe UI","Noto Sans","Helvetica","Arial","sans-serif","Apple Color Emoji","Segoe UI Emoji"; */
---space:"../images/space.jpg";
+}
+:root {
+  --space:"../images/space.jpg";
+  --primary-color:#010314;
+  --secondary-color: #1e2038;
+  --blue-01:#30334f;
+  --border:gray;
+  --border-hover:rgba(128, 128, 128, 0.621);
+  --info-color:rgba(255, 255, 255, 0.6);
 }
 .body{
   background-color: rgba(30, 32, 44, 0.95);
@@ -24,7 +31,7 @@ h1 {
 } */
 
 h3 {
-  color: #002c66;
+  color: white;
   font-size: 1.5em;
 }
 
@@ -36,7 +43,7 @@ h4 {
 p {
   /* margin-top: 0.75em; */
   margin-bottom: 0.5em;
-  color: #282727;
+  color:var(--info-color);
   font-size: 1.25em;
   text-justify: center;
 }
@@ -208,7 +215,6 @@ position: relative;
 }
 
 .content a {
-  color: rgb(4, 4, 65);
   margin-right: 10px;
   font-weight: 300;
 }
@@ -623,86 +629,102 @@ blockquote {
 
 .contact-container {
   display: flex;
-  justify-content: space-between;
+  gap:2rem;
   align-items: center;
   padding: 2rem;
-  background-image: url(./images/contactBackground.jpg);
+  background-image: linear-gradient(to bottom,var(--primary-color),var(--secondary-color));
   /* background-image: url("https://www.designyourway.net/blog/wp-content/uploads/2018/11/pastel-background-goo.jpg"); Replace with the actual path to your image */
   background-size: cover;
   background-position: center;
   color: #000000;
 }
-
 .contact-info {
   flex: 1;
   padding: 2rem;
-  background-image: url(./images/formbackground.jpg);
-  /* background-image: url("https://t4.ftcdn.net/jpg/05/08/85/65/360_F_508856527_j47VSpWgbNbECuiOa9kSUllJBuZ2V1hF.jpg"); Replace with the actual path to your background image */
+  background-color: var(--primary-color);
   background-size: cover;
-  background-color: white;
   border-radius: 10px;
+  color:white;
+  border:1px solid var(--border);
 }
-
+.contact-title{
+  margin-bottom: 0.6rem;
+  padding:7px;
+  border-bottom: 1px solid rgb(63, 63, 63);
+}
 .address {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
+  color: var(--info-color);
+}.address .icon a{
+  color: white;
+ margin-left: 0;
 }
 
 .address .icon {
   margin-right: 1rem;
   font-size: 1.2rem;
-  color: #000000;
+  color:white;
 }
 .address .icon:hover {
-  color: #007bff;
+  color:var(--info-color)
 }
-
+.address p{
+  margin-bottom: 0px;
+}
 .social-icons .icon {
   font-size: 1.5rem;
   margin-right: 1rem;
-  color: #000000; /* Icon color */
+  color:var(--blue-01); /* Icon color */
   transition: color 0.3s ease;
 }
 
 .social-icons .icon:hover {
-  color: #007bff; /* Change icon color on hover */
+  color: white; /* Change icon color on hover */
 }
 
 .contact-form {
   flex: 1;
   padding: 2rem;
-  background-image: url("https://t4.ftcdn.net/jpg/05/08/85/65/360_F_508856527_j47VSpWgbNbECuiOa9kSUllJBuZ2V1hF.jpg"); /* Replace with the actual path to your background image */
   background-size: cover; /* Cover the entire element */
-  background-color: rgb(255, 255, 255);
+  background-color:var(--primary-color);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border);
 }
 
+.form-title{
+  color: white;
+  font-weight: 600;
+  font-size: 1.7em;
+}
 .form-group {
   margin-bottom: 1rem;
 }
 
 .form-group label {
-  font-weight: bold;
-  color: #000000;
+  color:var(--info-color);
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
+  margin-top: 0.3em;
   width: 100%;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
+  color: white;
+  background-color: var(--primary-color);
 }
 
 button[type="submit"] {
-  background-color: #000000;
-  color: #fff;
+  background-color: white;
+  color:black;
   border: none;
-  border-radius: 5px;
+  border-radius: 17px;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
@@ -710,7 +732,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #ffcccc;
+  background-color: var(--blue-01);
 }
 
 .contact-form,
@@ -722,7 +744,7 @@ button[type="submit"]:hover {
 
 /* Animation for fade-in */
 .contact-container {
-  animation: fadeIn 1s ease-in-out forwards; /* Run the fadeIn animation */
+  animation: 3s linear 1s slidein; /* Run the fadeIn animation */
 }
 
 /* Define the fadeIn animation */
@@ -803,8 +825,8 @@ button[type="submit"]:hover {
 .about-us {
   text-align: center;
   padding: 40px;
-  background-color: #ffb6c1;
-  background-image: url("https://images.template.net/94766/pastel-pink-background-yw0ub.jpg");
+  background-image: linear-gradient(to bottom,#010314 , #1e2038);
+  /* background-image: url("https://images.template.net/94766/pastel-pink-background-yw0ub.jpg"); */
 }
 
 .founders {
@@ -829,7 +851,8 @@ button[type="submit"]:hover {
 }
 
 .founder {
-  border-radius: 0; /* Remove border-radius for square containers */
+  border-radius: 1rem;
+  border: 1px solid var(--border);
   padding: 20px; /* Adjust padding as needed */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   width: 300px; /* Set the width for square containers */
@@ -843,6 +866,8 @@ button[type="submit"]:hover {
 
 .founder:hover {
   transform: scale(1.1);
+  border: 1px solid var(--border-hover);
+  
 }
 
 .founder-image {
@@ -883,4 +908,13 @@ button[type="submit"]:hover {
 .founder-details p {
   font-size: 16px;
   color: #777;
+}
+.analysis-image {
+  padding: 14px 13px;
+  border-radius: 10px; /* Adjust border radius as needed */
+  border: 'filter: blur(5px)';/* Add border */
+  /* object-fit: cover; */
+  width: 120px;
+  margin: 0 2px 10px ;
+  color:rgba(255, 255, 255, 0.678)
 }

@@ -11,13 +11,13 @@ function Blogs({ isAuth }) {
     await deleteDoc(postDoc);
   };
 
-  const backgroundColors = [
-    "#fcf4dd", 
-    "#ddedea",
-    "#e8dff5", 
-    "#fce1e4", 
-    "#daeaf6", 
-  ];
+  // const backgroundColors = [
+  //   "#fcf4dd", 
+  //   "#ddedea",
+  //   "#e8dff5", 
+  //   "#fce1e4", 
+  //   "#daeaf6", 
+  // ];
 
   useEffect(() => {
     const getPosts = async () => {

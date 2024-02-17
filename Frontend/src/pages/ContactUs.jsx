@@ -39,7 +39,7 @@ const ContactUs = () => {
   return (
     <div className="contact-container">
       <div className="contact-info">
-        <h2>Contact Us</h2>
+        <h2 className='contact-title'>Contact Us</h2>
         <div className="address">
           <div className="icon">
             <a href="https://maps.app.goo.gl/ra1yTAmHCYDvCrrV6" target="_blank" rel="noopener noreferrer">
@@ -73,7 +73,7 @@ const ContactUs = () => {
         </div>
       </div>
       <div className="contact-form">
-        <h3>Send Us a Message</h3>
+        <p className='form-title'>Send Us a Message</p>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Name</label>

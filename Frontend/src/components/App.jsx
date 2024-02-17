@@ -10,6 +10,7 @@ import Home from "../pages/Home";
 import Volunteer from "../pages/Volunteer";
 import ContactUs from "../pages/ContactUs";
 import SignUp from "../pages/SignUp";
+import Selectmenu from "../pages/Research";
 const App = () => {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
 
@@ -27,8 +28,8 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="blogs" element={<Blogs isAuth={isAuth} />} />
-         
-<Route path="volunteer" element={<Volunteer />} />
+         <Route path="resource" element={<Selectmenu  />} />
+          <Route path="volunteer" element={<Volunteer />} />
           <Route path="contact" element={<ContactUs />} />
           <Route path="sign-up" element={<SignUp />} />
           <Route path="createpost" element={<CreatePost isAuth={isAuth} />} />
