@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Home_info from '../components/Home_info';
 import space from '../images/space.jpg';

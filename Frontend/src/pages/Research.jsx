@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Select from 'react-select';
 import graph1 from '../images/graph1.png';
 import graph2 from '../images/graph2.jpg';
