@@ -28,7 +28,7 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="blogs" element={<Blogs isAuth={isAuth} />} />
-         <Route path="resource" element={<Selectmenu  />} />
+         <Route path="Research" element={<Selectmenu  />} />
           <Route path="volunteer" element={<Volunteer />} />
           <Route path="contact" element={<ContactUs />} />
           <Route path="sign-up" element={<SignUp />} />

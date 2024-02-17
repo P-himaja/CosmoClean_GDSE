@@ -20,6 +20,12 @@ const getMenuItems = () => {
     },
     {
       title: 'Resources',
+      submenu: [
+        {
+        title: 'Research',
+        url: 'research',
+        }
+      ]
     },
     {
       title: 'Social',

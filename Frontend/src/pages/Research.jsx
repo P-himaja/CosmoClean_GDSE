@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
-import graph1 from './assets/graph1.png';
-import graph2 from './assets/graph2.jpg';
-import analytics from './assets/analysis.png'
-import './App.css'
+import graph1 from '../images/graph1.png';
+import graph2 from '../images/graph2.jpg';
+import analytics from '../images/analysis.png'
 
 const options = [
   { value: "all", label: "All" },
