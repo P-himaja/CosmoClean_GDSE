@@ -11,13 +11,7 @@ function Blogs({ isAuth }) {
     await deleteDoc(postDoc);
   };
 
-  const backgroundColors = [
-    "#fcf4dd", 
-    "#ddedea",
-    "#e8dff5", 
-    "#fce1e4", 
-    "#daeaf6", 
-  ];
+
 
   useEffect(() => {
     const getPosts = async () => {
@@ -32,13 +26,13 @@ function Blogs({ isAuth }) {
     <div className="blogsPage">
       {postLists.map((post, index) => {
         
-        const backgroundColor = backgroundColors[index % backgroundColors.length];
+        
 
         return (
-          <div className="post" key={post.id} style={{ backgroundColor }}>
+          <div className="post" key={post.id}>
             <div className="postHeader">
               <div className="title">
-                <h2>{post.title}</h2>
+                <b>{post.title}</b>
               </div>
               <div className="deletePost">
                 {isAuth && post.author.id === auth.currentUser.uid && (
@@ -46,6 +40,7 @@ function Blogs({ isAuth }) {
                     onClick={() => {
                       deletePost(post.id);
                     }}
+                    
                   >
                     &#128465;
                   </button>
@@ -53,7 +48,7 @@ function Blogs({ isAuth }) {
               </div>
             </div>
             <div className="postTextContainer">{post.postText}</div>
-            <h3 className="postAuthor">@{post.author.name}</h3>
+            <p className="postAuthor">@{post.author.name}</p>
           </div>
         );
       })}

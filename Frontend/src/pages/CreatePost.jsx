@@ -18,6 +18,11 @@ function CreatePost({ isAuth }) {
     });
     navigate("/blogs");
   };
+  const  handsubmit= event => {
+    event.preventDefault();
+
+    alert("Blog submitted successfully!");
+  };
 
   useEffect(() => {
     if (!isAuth) {
@@ -39,15 +44,15 @@ function CreatePost({ isAuth }) {
           />
         </div>
         <div className="inputGp">
-          <label> Post:</label>
+          <label>post..</label>
           <textarea
-            placeholder="Post..."
+            placeholder="write something..."
             onChange={(event) => {
               setPostText(event.target.value);
             }}
           />
         </div>
-        <button onClick={createPost}> Submit Post</button>
+        <button onClick={(event) => { createPost(); handsubmit(event); }}>Submit Post</button>
       </div>
     </div>
   );
