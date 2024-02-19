@@ -13,6 +13,18 @@ import SignUp from "../pages/SignUp";
 import Selectmenu from "../pages/Research";
 const App = () => {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
+  const [prediction, setPrediction] = useState('');
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.post('http://localhost:5000/predict', {
+        input_data: [/* input data */]
+      });
+      setPrediction(response.data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
 
   const signUserOut = () => {
     signOut(auth).then(() => {
@@ -36,6 +48,8 @@ const App = () => {
           <Route path="login" element={<Login setIsAuth={setIsAuth} />} />
         </Route>
       </Routes>
+      <button onClick={fetchData}>Get Prediction</button>
+      <div>{prediction}</div>
     </>
   );
 };
