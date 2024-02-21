@@ -1,27 +1,12 @@
-import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Home_info from '../components/Home_info';
-import space from '../images/space.jpg';
 
 
 // import img1 from '../images/BrainPeace11.png';
 
 
 const Home = () => {
-  const [joke, setJoke] = useState('');
 
-  useEffect(() => {
-    fetchJoke();
-  }, []);
-
-  const fetchJoke = async () => {
-    try {
-      const response = await axios.get('https://official-joke-api.appspot.com/random_joke');
-      setJoke(response.data.setup + ' ' + response.data.punchline);
-    } catch (error) {
-      console.error('Error fetching joke:', error);
-    }
-  };
 
     return (  
       <div className="home-content">

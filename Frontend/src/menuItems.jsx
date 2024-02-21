@@ -29,7 +29,7 @@ const getMenuItems = () => {
     },
     {
         title: 'analytics',
-        url: '/',
+        url: 'analytics',
     },
       
     {
