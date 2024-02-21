@@ -1,6 +1,6 @@
 import requests
 
-GEMINI_API_KEY = "AIzaSyB1iezzoIb8qy511wjb2YRFclF27LKW0kI"  
+GEMINI_API_KEY = "AIzaSyC9SK0ULLO8I0tWGjHUILyYltHzuJr7Ml8"  
 GEMINI_ENDPOINT = "https://language.googleapis.com/v1/documents:analyzeSentiment"
 
 def send_message(message):

@@ -31,7 +31,10 @@ const getMenuItems = () => {
         title: 'analytics',
         url: 'analytics',
     },
-      
+    {
+      title: 'Predict',
+      url: 'predict',
+    },     
     {
       title: 'Social',
       submenu: [
