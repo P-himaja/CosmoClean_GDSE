@@ -1,34 +1,20 @@
-import requests
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+import google.generativeai as genai
 
-GEMINI_API_KEY = "AIzaSyC9SK0ULLO8I0tWGjHUILyYltHzuJr7Ml8"  
-GEMINI_ENDPOINT = "https://language.googleapis.com/v1/documents:analyzeSentiment"
+app = Flask(__name__)
+CORS(app)
 
-def send_message(message):
-        
-        payload = {
-            "input": message
-        }
-        headers = {
-            "Authorization": f"Bearer {GEMINI_API_KEY}"
-        }
-        response = requests.post(GEMINI_ENDPOINT, json=payload, headers=headers)
-        if not response.text:
-            return "API did not return any response"
-        else:
-            print(response.text)
-            return response.json()["generatedText"]
+genai.configure(api_key='AIzaSyB1iezzoIb8qy511wjb2YRFclF27LKW0kI')
+model = genai.GenerativeModel('gemini-pro')
 
+@app.route('/api/chat', methods=['POST'])
 def chat():
-        print("Welcome to the chatbot! Say 'hi' to begin.")
-        while True:
-            user_message = input("> ").lower()
-            if user_message == "quit":
-                break
-            if user_message == "hi":
-                bot_message = "Hello! What would you like to talk about?"
-            else:
-                bot_message = send_message(user_message)
-            print(f"Bot: {bot_message}")
+    user_input = request.json.get('message')
 
-if __name__ == "__main__":
-        chat()
+    response = model.generate_content(user_input).candidates[0].content.parts[0].text
+
+    return jsonify({'message': response})
+
+if __name__ == '__main__':
+    app.run(debug=True)

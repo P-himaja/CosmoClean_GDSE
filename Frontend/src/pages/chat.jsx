@@ -1,35 +1,41 @@
-import { GoogleGenerativeAI } from '@google/generative-ai';
-import dotenv from 'dotenv';
-dotenv.config();
+import React, { useState } from 'react';
+import axios from 'axios';
 
-// Access your API key as an environment variable (see "Set up your API key" above)
-const genAI = new GoogleGenerativeAI(import.meta.env.API_KEY);
+const Chat = () => {
+  const [chatLog, setChatLog] = useState([]);
+  const [userInput, setUserInput] = useState('');
 
-async function run() {
-  // For text-only input, use the gemini-pro model
-  const model = genAI.getGenerativeModel({ model: "gemini-pro"});
+  const sendMessage = async () => {
+    if (userInput.trim() === '') return;
 
-  const chat = model.startChat({
-    history: [
-      {
-        role: "user",
-        parts: "Hello, I have 2 dogs in my house.",
-      },
-      {
-        role: "model",
-        parts: "Great to meet you. What would you like to know?",
-      },
-    ],
-    generationConfig: {
-      maxOutputTokens: 100,
-    },
-  });
+    const newChatLog = [...chatLog, { sender: 'You', message: userInput }];
+    setChatLog(newChatLog);
+    setUserInput('');
 
-  const msg = "How many paws are in my house?";
-  const result = await chat.sendMessage(msg);
-  const response = await result.response;
-  const text = response.text();
-  console.log(text);
-}
+    try {
+      const response = await axios.post('http://127.0.0.1:5000/api/chat', { message: userInput });
+      const { message } = response.data;
+      setChatLog([...newChatLog, { sender: 'Chatbot', message }]);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
 
-run();
+  const handleInputChange = (e) => {
+    setUserInput(e.target.value);
+  };
+
+  return (
+    <div id="chat-container">
+      <div id="chat-log">
+        {chatLog.map((log, index) => (
+          <div key={index}><strong>{log.sender}: </strong>{log.message}</div>
+        ))}
+      </div>
+      <input type="text" value={userInput} onChange={handleInputChange} placeholder="Type your message..." />
+      <button onClick={sendMessage}>Send</button>
+    </div>
+  );
+};
+
+export default Chat;
