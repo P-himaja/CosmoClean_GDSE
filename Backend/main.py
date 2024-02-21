@@ -1,10 +1,11 @@
 from flask import Flask, jsonify, request
 import joblib
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}})
 
-# Load the joblib model
-model = joblib.load("your_model.joblib")
+model = joblib.load(r"D:\GDSC\CosmoClean_GDSE-11\Backend\risk_model.joblib") 
 
 @app.route('/predict', methods=['POST'])
 def predict():
