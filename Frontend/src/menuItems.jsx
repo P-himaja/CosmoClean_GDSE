@@ -28,6 +28,11 @@ const getMenuItems = () => {
       ]
     },
     {
+        title: 'analytics',
+        url: '/',
+    },
+      
+    {
       title: 'Social',
       submenu: [
         {
