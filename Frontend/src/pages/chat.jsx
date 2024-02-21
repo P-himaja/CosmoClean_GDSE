@@ -8,13 +8,14 @@ const Chat = () => {
   const sendMessage = async () => {
     if (userInput.trim() === '') return;
 
-    setChatLog([...chatLog, { sender: 'You', message: userInput }]);
+    const newChatLog = [...chatLog, { sender: 'You', message: userInput }];
+    setChatLog(newChatLog);
     setUserInput('');
 
     try {
       const response = await axios.post('http://127.0.0.1:5000/api/chat', { message: userInput });
       const { message } = response.data;
-      setChatLog([...chatLog, { sender: 'Chatbot', message }]);
+      setChatLog([...newChatLog, { sender: 'Chatbot', message }]);
     } catch (error) {
       console.error('Error:', error);
     }
