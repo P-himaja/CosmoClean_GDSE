@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "./firebase-config";
@@ -12,14 +12,18 @@ import ContactUs from "../pages/ContactUs";
 import SignUp from "../pages/SignUp";
 import Selectmenu from "../pages/Research";
 import analytics from "../pages/analytics";
+import Chat from "../pages/chat";
+import axios from 'axios';
+
 const App = () => {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
   const [prediction, setPrediction] = useState('');
+  const [inputData, setInputData] = useState('');
 
   const fetchData = async () => {
     try {
       const response = await axios.post('http://localhost:5000/predict', {
-        input_data: [/* input data */]
+        input_data: [inputData] // Pass user input as input data for prediction
       });
       setPrediction(response.data);
     } catch (error) {
@@ -34,20 +38,21 @@ const App = () => {
       window.location.pathname = "/login";
     });
   };
-// Webhook test
+
   return (
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="blogs" element={<Blogs isAuth={isAuth} />} />
-         <Route path="Research" element={<Selectmenu  />} />
+          <Route path="Research" element={<Selectmenu />} />
           <Route path="volunteer" element={<Volunteer />} />
           <Route path="contact" element={<ContactUs />} />
           <Route path="sign-up" element={<SignUp />} />
-          <Route path="analytics" element={<analytics />}/>
+          <Route path="analytics" element={<analytics />} />
           <Route path="createpost" element={<CreatePost isAuth={isAuth} />} />
           <Route path="login" element={<Login setIsAuth={setIsAuth} />} />
+          <Route path="chat" element={<Chat />} />
         </Route>
       </Routes>
       <button onClick={fetchData}>Get Prediction</button>
