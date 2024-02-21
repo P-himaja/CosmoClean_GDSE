@@ -18,7 +18,7 @@
 }
 h1 {
   color: white;
-  font-size: 3.25em;
+  font-size: 3em;
  padding: .5rem;
   margin-bottom: 0.5em;
   text-align: center;
@@ -447,30 +447,38 @@ blockquote {
 }
 
 .createPostPage .cpContainer {
+  background-color: rgba(255, 255, 255, 0.089);
   margin-top: 4em;
   margin-bottom: 4em;
-  width: 50%;
+  width: 60%;
   height: fit-content;
   padding: 20px;
-  background-image: url("./images/contactBackground.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  border: 2px solid rgb(81, 80, 80);
+  border: 1px solid rgb(81, 80, 80);
+}
+.cpContainer::after {
+  background-repeat: no-repeat;
+
 }
 
 .createPostPage .cpContainer h1 {
+  font-size: 2.3rem;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-image: radial-gradient(45% 100% at 50% 50%,#fff 30%,hsla(0, 0%, 64%, 0.4) 100%);
+  font-weight: 600;
   margin-top: 2%;
   text-align: center;
-  text-decoration: underline;
+  font-size: 3rem;
 }
 
 .createPostPage .cpContainer label {
   margin-top: 2%;
-  font-size: 2em;
-  color: #000000;
+  font-size: 1.6em;
+  color:var(--info-color);
 }
 
 .createPostPage .cpContainer .inputGp {
@@ -481,13 +489,13 @@ blockquote {
 
 .createPostPage .inputGp input,
 .createPostPage .inputGp textarea {
-  font-size: 2em;
+  font-size: 1.6em;
   opacity: 0.7;
   padding: 7px;
 }
 
 .createPostPage .inputGp textarea {
-  font-size: 2em;
+  font-size: 1.6em;
   height: 250px;
 }
 
@@ -495,18 +503,19 @@ blockquote {
   padding: 10px;
   border: none;
   background-color: purple;
-  background-color: #276272;
-  color: white;
-  border-radius: 5px;
+  background-color:white;
+  color:black;
+  border-radius: 2rem;
   font-size: 1.5em;
   font-weight: bold;
   transition: 0.2s;
-  width: 60%;
+  width: 40%;
   left: 30px;
   margin-top: 5%;
   margin-bottom: 5%;
-  margin-left: 20%;
+  margin-left: 30%;
   bottom: 15px;
+ 
   cursor: pointer;
 }
 
@@ -610,7 +619,6 @@ blockquote {
 
 .blogsPage .deletePost button {
   border: none;
-  background-color:white;
   font-size: 30px;
   cursor: pointer;
 }

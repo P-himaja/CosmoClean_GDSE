@@ -32,11 +32,13 @@ function CreatePost({ isAuth }) {
 
   return (
     <div className="createPostPage">
+    
       <div className="cpContainer">
         <h1>Create A Post</h1>
         <div className="inputGp">
           <label> Title:</label>
           <input
+          type="text"
             placeholder="Title..."
             onChange={(event) => {
               setTitle(event.target.value);
@@ -44,7 +46,7 @@ function CreatePost({ isAuth }) {
           />
         </div>
         <div className="inputGp">
-          <label>post..</label>
+          <label>Post</label>
           <textarea
             placeholder="write something..."
             onChange={(event) => {
