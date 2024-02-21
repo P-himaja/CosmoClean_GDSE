@@ -1,7 +1,7 @@
 import  { useState } from 'react';
 import 'font-awesome/css/font-awesome.min.css';
 import ML from '../images/MLimg.png';
-import dataset from '../images/dataset_4.png';
+import dataset from '../images/dataset.png';
 
 function Analytics()  {
   const [formData, setFormData] = useState({
@@ -35,7 +35,17 @@ function Analytics()  {
           </div>
           <img src={ML} alt="ML" className="analysis-image" />
         </div>
-        
+        <div className='info_analytics'>
+        <p id="title_analytics">Salient Features</p>
+        <div className="Features_divider__1WGjU"></div>
+        <div class="content_analytics"><div>
+        <div class="Features_featureTitle__oyjT_">
+        <h5>Comprehensive data</h5></div><p>Includes all necessary parameters for accurate collision assessment.</p></div><div><div class="Features_featureTitle__oyjT_"><h5>Accurate Prediction</h5></div><p>Leverages historical data and analysis to predict collision risks with high precision.</p></div><div><div class="Features_featureTitle__oyjT_"><h5>Efficient analysis</h5></div><p>Presents clear and informative warnings about impending collisions, aiding decision-making.</p></div></div>
+        </div>
+        <p id="title_analytics">Dataset used</p>
+        <div className="Features_divider__1WGjU"></div>
+        <img src={dataset} alt="dataset" className="dataset" />
+       
       {/* //   <p className='form-title'>Satellite Information</p>
       //   <form onSubmit={handleSubmit}>
       //     <div className="form-group">
