@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 const Chat = () => {
@@ -26,15 +26,16 @@ const Chat = () => {
   };
 
   return (
-    <div id="chat-container">
-      <div id="chat-log">
+      <div className='cp_container'>
+        <div className="chat-log">
         {chatLog.map((log, index) => (
           <div key={index}><strong>{log.sender}: </strong>{log.message}</div>
         ))}
-      </div>
-      <input type="text" value={userInput} onChange={handleInputChange} placeholder="Type your message..." />
+         <input type="text" value={userInput} onChange={handleInputChange} placeholder="Type your message..." />
       <button onClick={sendMessage}>Send</button>
-    </div>
+        
+      </div>
+     </div>
   );
 };
 
