@@ -1,0 +1,76 @@
+.chat-app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.chat-list {
+    flex: 1;
+    /* Occupies remaining space above message form */
+    overflow-y: auto;
+    /* Enable scrolling if content overflows */
+    height: 80vh;
+}
+
+.message-form {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    height: 20vh;
+    width: auto;
+    /* Align elements to the right */
+}
+
+.input-area {
+    display: inline-flex;
+    justify-content: center;
+    width: 70vw;
+    margin-left: 50px;
+    padding-right: 30px;
+}
+
+.button-area {
+    display: inline-flex;
+    width: 30vw;
+    margin-left: 50px;
+}
+
+.message-input {
+    border-radius: 25px;
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    margin-right: 1rem;
+    width: 70vw;
+    height: 40px;
+    font-size: 1.2rem;
+    padding-left: 25px;
+}
+
+.send-button {
+    display: inline-flex;
+    max-height: 50px;
+    width: 120px;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #0a5dda;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+//Chat message:
+/* community.scss */
+.message-right {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #0a5dda;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}

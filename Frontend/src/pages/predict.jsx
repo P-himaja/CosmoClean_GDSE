@@ -20,6 +20,15 @@ const Predict = () => {
       console.error('Error:', error);
     }
   };
+  function MyComponent() {
+    const [yLast, setYLast] = useState(null);
+  
+    useEffect(() => {
+      fetch('/get_y_last')
+        .then(response => response.json())
+        .then(data => setYLast(data.y_last));
+    }, []);
+  }
 
   return (
     <div>
