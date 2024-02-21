@@ -117,6 +117,6 @@ function Analytics()  {
       //   </form> */}
       </div>
   );
-};
+}
 
 export default Analytics;

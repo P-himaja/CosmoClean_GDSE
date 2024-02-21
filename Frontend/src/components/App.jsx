@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "./firebase-config";
@@ -11,10 +11,9 @@ import Volunteer from "../pages/Volunteer";
 import ContactUs from "../pages/ContactUs";
 import SignUp from "../pages/SignUp";
 import Selectmenu from "../pages/Research";
-import analytics from "../pages/analytics";
+import Analytics from "../pages/analytics";
 import Chat from "../pages/chat";
-import axios from 'axios';
-
+import Predict from "../pages/predict";
 const App = () => {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
   const [prediction, setPrediction] = useState('');
@@ -45,21 +44,40 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="blogs" element={<Blogs isAuth={isAuth} />} />
-          <Route path="Research" element={<Selectmenu />} />
+         <Route path="Research" element={<Selectmenu  />} />
           <Route path="volunteer" element={<Volunteer />} />
           <Route path="contact" element={<ContactUs />} />
           <Route path="sign-up" element={<SignUp />} />
-          <Route path="analytics" element={<analytics />}/>
-          <Route path="predict" element= {<predict />}>
           <Route path="createpost" element={<CreatePost isAuth={isAuth} />} />
           <Route path="login" element={<Login setIsAuth={setIsAuth} />} />
-          <Route path="chat" element={<Chat />} />
+          <Route path="analytics" element={<Analytics />}/>
+          <Route path="predict" element= {<Predict/>}/>
+          <Route path="chat" element={<Chat />}/>
+
         </Route>
       </Routes>
-      <button onClick={fetchData}>Get Prediction</button>
-      <div>{prediction}</div>
     </>
   );
 };
 
 export default App;
+
+{/* <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="blogs" element={<Blogs isAuth={isAuth} />} />
+        <Route path="Research" element={<Selectmenu />} />
+        <Route path="volunteer" element={<Volunteer />} />
+        <Route path="contact" element={<ContactUs />} />
+        <Route path="sign-up" element={<SignUp />} />
+        <Route path="analytics" element={<analytics />}/>
+        <Route path="predict" element= {<predict />}>
+        <Route path="createpost" element={<CreatePost isAuth={isAuth} />} />
+        <Route path="login" element={<Login setIsAuth={setIsAuth} />} />
+        <Route path="chat" element={<Chat />} />
+        </Route>
+      </Routes>
+      <button onClick={fetchData}>Get Prediction</button>
+      <div>{prediction}</div>
+    </> */}
