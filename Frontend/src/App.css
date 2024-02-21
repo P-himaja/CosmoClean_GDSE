@@ -632,7 +632,7 @@ blockquote {
 
 /*contact us */
 
-.contact-container {
+.contact-container{
   display: flex;
   gap:2rem;
   align-items: center;
@@ -688,7 +688,7 @@ blockquote {
   color: white; /* Change icon color on hover */
 }
 
-.contact-form {
+.contact-form{
   flex: 1;
   padding: 2rem;
   background-size: cover; /* Cover the entire element */
@@ -713,6 +713,7 @@ blockquote {
 
 input[type="text"],
 input[type="email"],
+input[type="number"],
 textarea {
   margin-top: 0.3em;
   width: 100%;
@@ -1106,4 +1107,18 @@ padding: 20px;
     cursor: not-allowed;
   }
 
+}
+.Analysis-form{
+width:30rem;
+  flex: 1;
+  padding: 2rem;
+  background-size: cover; /* Cover the entire element */
+  background-color:var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border);
+}
+.back_analytics{
+  background-image: linear-gradient(to left,var(--primary-color),var(--secondary-color));
+padding: 2rem;
 }

@@ -49,7 +49,7 @@ const App = () => {
           <Route path="volunteer" element={<Volunteer />} />
           <Route path="contact" element={<ContactUs />} />
           <Route path="sign-up" element={<SignUp />} />
-          <Route path="analytics" element={<analytics />} />
+          <Route path="analytics" element={<analytics />}/>
           <Route path="createpost" element={<CreatePost isAuth={isAuth} />} />
           <Route path="login" element={<Login setIsAuth={setIsAuth} />} />
           <Route path="chat" element={<Chat />} />
