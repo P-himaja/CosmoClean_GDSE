@@ -11,7 +11,7 @@ import Volunteer from "../pages/Volunteer";
 import ContactUs from "../pages/ContactUs";
 import SignUp from "../pages/SignUp";
 import Selectmenu from "../pages/Research";
-import analytics from "../pages/analytics";
+import Analytics from "../pages/analytics";
 const App = () => {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
   const [prediction, setPrediction] = useState('');
@@ -45,7 +45,7 @@ const App = () => {
           <Route path="volunteer" element={<Volunteer />} />
           <Route path="contact" element={<ContactUs />} />
           <Route path="sign-up" element={<SignUp />} />
-          <Route path="analytics" element={<analytics />}/>
+          <Route path="analytics" element={<Analytics />}/>
           <Route path="createpost" element={<CreatePost isAuth={isAuth} />} />
           <Route path="login" element={<Login setIsAuth={setIsAuth} />} />
         </Route>
