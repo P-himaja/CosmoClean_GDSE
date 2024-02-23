@@ -1183,6 +1183,7 @@ margin-left: 15%;
   border: 2px solid rgb(81, 80, 80);
   color: white;
   margin:10px;
+  box-shadow:1px 3px 10px rgb(82, 80, 93);
   
 }
 
@@ -1233,4 +1234,12 @@ button:hover {
 
 strong {
   color: #007BFF;
+}
+#title_chatbot{
+  margin-top: 2.5rem;
+  font-size: 2.3rem;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-image: radial-gradient(45% 100% at 50% 50%,#fff 30%,hsla(0, 0%, 64%, 0.4) 100%);
+  font-weight: 600;
 }
