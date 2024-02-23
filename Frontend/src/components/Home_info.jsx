@@ -10,21 +10,21 @@ const contentData = [
     image1,
     title: "What do we do ?",
     text: "Discover more about space junk and learn about our mission to help collisionless landing of our spacecrafts.",
-    link: "/Volunteer",
+    link: "/analytics",
   },
   {
     imageSrc:
       image2,
     title: "Space Debris ",
     text: "Unveil the trajectory of celestial fragments and glimpse the potential scenarios that await if we don't navigate this challenge",
-    link: "/Quiz",
+    link: "/Research",
   },
   {
     imageSrc:
       image3,
     title: "Effects and Solutions ",
     text:"Embark on a cosmic exploration and dive into some major effects of space debris, unraveling its impact on satellite technology and space missions through us.",
-    link: "/Articles",
+    link: "/Predict",
   },
 ];
 

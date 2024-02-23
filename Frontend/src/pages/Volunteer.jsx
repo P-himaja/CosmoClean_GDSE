@@ -26,7 +26,8 @@ const founders = [
 const Volunteer = () => {
   return (
     <div className="about-us">
-      <h2>About Us</h2>
+      <p>About Us</p>
+      <div class="Features_divider__1WGjU"></div>
       <div className="founders">
         {founders.map((founder, index) => (
           <div key={index} className="founder">

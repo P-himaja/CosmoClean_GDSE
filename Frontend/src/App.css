@@ -69,9 +69,6 @@ a {
 header {
   /* box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 2px 0 rgba(0, 0, 0, 0.05); */
   color: #212529;
-  background-color: transparent;
-  background-image: url("../src/images/image.jpg");
- 
 }
 .wave{
   position: absolute;
@@ -443,7 +440,7 @@ blockquote {
   height: auto;
   display: grid;
   place-items: center;
-  background-image:linear-gradient(to bottom,var(--primary-color),var(--secondary-color));;
+  background-image:linear-gradient(to left,var(--primary-color)92%,);;
 }
 
 .createPostPage .cpContainer {
@@ -579,7 +576,7 @@ blockquote {
   width: 100%;
   min-height: calc(100vh - 80px);
   height: auto;
-  background-image: linear-gradient(to bottom,var(--primary-color),var(--secondary-color));
+  background-image: linear-gradient(to left,var(--primary-color),var(--secondary-color));
   display: flex;
   flex-direction: column;
   height: 70%;
@@ -645,7 +642,7 @@ blockquote {
   gap:2rem;
   align-items: center;
   padding: 2rem;
-  background-image: linear-gradient(to bottom,var(--primary-color),var(--secondary-color));
+  background-image: linear-gradient(to left,var(--primary-color),var(--secondary-color));
   background-size: cover;
   background-position: center;
   color: #000000;
@@ -838,10 +835,17 @@ button[type="submit"]:hover {
 .about-us {
   text-align: center;
   padding: 40px;
-  background-image: linear-gradient(to bottom,#010314 , #1e2038);
+  background-image: linear-gradient(to left,var(--primary-color) , var(--secondary-color));
   /* background-image: url("https://images.template.net/94766/pastel-pink-background-yw0ub.jpg"); */
 }
+.about-us p{
 
+  font-size: 2.3rem;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-image: radial-gradient(45% 100% at 50% 50%,#fff 30%,hsla(0, 0%, 64%, 0.272) 100%);
+  font-weight: 600;
+}
 .founders {
   display: flex;
   flex-wrap: wrap;
@@ -1171,7 +1175,7 @@ margin-left: 15%;
 }
 
 .cp_container{
-  background-image: linear-gradient(to bottom,var(--primary-color),var(--secondary-color));
+  background-image: linear-gradient(to left,var(--primary-color),var(--secondary-color));
   display: flex;
   justify-content: center;
   
@@ -1191,7 +1195,7 @@ margin-left: 15%;
   border: 2px solid rgb(81, 80, 80);
   color: white;
   margin:10px;
-  
+  overflow-y: auto;
 }
 
 #chat-log div {
@@ -1204,7 +1208,7 @@ margin-left: 15%;
   padding: 20px;
 }
 
-input {
+.predict_input {
   width: calc(100% - 20px);
   padding: 10px;
   margin: 0 10px;
@@ -1213,7 +1217,7 @@ input {
   outline: none;
 }
 
-button {
+.predict_btn {
   width: calc(100% - 500px);
   align-items: center;
   padding: 10px;
@@ -1225,7 +1229,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.predict_btn:hover {
   background-color: #0056b3;
 }
 
@@ -1237,8 +1241,4 @@ button:hover {
 /* Style for sender "Chatbot" */
 #chat-log div:nth-child(odd) {
   text-align: left;
-}
-
-strong {
-  color: #007BFF;
 }

@@ -39,7 +39,7 @@ function Selectmenu() {
   };
 
   return (
-    <div style={{ display: 'flex', gap: "4rem", alignItems: 'top', background: `linear-gradient(to bottom,#010314 , #1e2038)`, padding: "0rem 3rem" }}>
+    <div style={{ display: 'flex', gap: "4rem", alignItems: 'top', background: `linear-gradient(to left,#010314 , #1e2038)`, padding: "0rem 3rem" }}>
       <div className="parent" style={{ padding: "1rem ", display: 'flex', flexDirection: "column", alignItems: "center", gap: "3rem" }}>
         <div style={{ margin: '2rem 1rem', width: "600px" }}>
           <p style={{ color: "white",fontSize:"2rem",fontWeight:"600" }}>Choose a country</p>

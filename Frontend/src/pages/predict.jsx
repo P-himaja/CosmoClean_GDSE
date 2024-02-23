@@ -35,9 +35,9 @@ const Predict = () => {
       <h2>Prediction</h2>
       <label>
         Input Data:
-        <input type="text" value={inputData} onChange={handleInputChange} />
+        <input className='predict_input' type="text" value={inputData} onChange={handleInputChange} />
       </label>
-      <button onClick={handlePredictClick}>Predict</button>
+      <button className="predict_btn"onClick={handlePredictClick}>Predict</button>
       <div>
         {prediction && (
           <div>
