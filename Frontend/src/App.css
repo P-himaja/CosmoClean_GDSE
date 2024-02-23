@@ -1196,6 +1196,8 @@ margin-left: 15%;
   color: white;
   margin:10px;
   overflow-y: auto;
+  box-shadow:1px 3px 10px rgb(82, 80, 93);
+  
 }
 
 #chat-log div {
@@ -1241,4 +1243,16 @@ margin-left: 15%;
 /* Style for sender "Chatbot" */
 #chat-log div:nth-child(odd) {
   text-align: left;
+}
+
+strong {
+  color: #007BFF;
+}
+#title_chatbot{
+  margin-top: 2.5rem;
+  font-size: 2.3rem;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-image: radial-gradient(45% 100% at 50% 50%,#fff 30%,hsla(0, 0%, 64%, 0.4) 100%);
+  font-weight: 600;
 }
