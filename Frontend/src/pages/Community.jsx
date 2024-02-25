@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import "./css/community.scss";
-import ChatMessage from "./components/Chat";
+import "./community.css";
+import ChatMessage from "./Chat1";
 
 const Community = () => {
     const [messages, setMessages] = useState([]);

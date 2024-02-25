@@ -28,12 +28,16 @@ const getMenuItems = () => {
       ]
     },
     {
-        title: 'analytics',
+        title: 'Analytics',
         url: 'analytics',
     },
     {
+      title: 'Chat',
+      url: 'chat',
+    },
+    {
       title: 'Predict',
-      url: 'predict',
+      url: 'predictionform',
     },     
     {
       title: 'Social',

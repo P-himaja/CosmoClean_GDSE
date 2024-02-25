@@ -158,7 +158,13 @@ position: relative;
   color: white;
 }
 
+.predict_container p{
+  color: black;
+  font-size: 1.5em;
+  text-align: center;
+  
 
+}
 .arrow::after {
   content: "";
   display: inline-block;

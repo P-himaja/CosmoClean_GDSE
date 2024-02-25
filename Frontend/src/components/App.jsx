@@ -13,7 +13,8 @@ import SignUp from "../pages/SignUp";
 import Selectmenu from "../pages/Research";
 import Analytics from "../pages/analytics";
 import Chat from "../pages/chat";
-import Predict from "../pages/predict";
+import PredictionForm from "../pages/predictionform";
+import Community from "../pages/Community";
 const App = () => {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
   const [prediction, setPrediction] = useState('');
@@ -51,8 +52,9 @@ const App = () => {
           <Route path="createpost" element={<CreatePost isAuth={isAuth} />} />
           <Route path="login" element={<Login setIsAuth={setIsAuth} />} />
           <Route path="analytics" element={<Analytics />}/>
-          <Route path="predict" element= {<Predict/>}/>
+          <Route path="predictionform" element= {<PredictionForm/>}/>
           <Route path="chat" element={<Chat />}/>
+          <Route path="community" element={<Community />}/>
 
         </Route>
       </Routes>
@@ -61,23 +63,3 @@ const App = () => {
 };
 
 export default App;
-
-{/* <>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="blogs" element={<Blogs isAuth={isAuth} />} />
-        <Route path="Research" element={<Selectmenu />} />
-        <Route path="volunteer" element={<Volunteer />} />
-        <Route path="contact" element={<ContactUs />} />
-        <Route path="sign-up" element={<SignUp />} />
-        <Route path="analytics" element={<analytics />}/>
-        <Route path="predict" element= {<predict />}>
-        <Route path="createpost" element={<CreatePost isAuth={isAuth} />} />
-        <Route path="login" element={<Login setIsAuth={setIsAuth} />} />
-        <Route path="chat" element={<Chat />} />
-        </Route>
-      </Routes>
-      <button onClick={fetchData}>Get Prediction</button>
-      <div>{prediction}</div>
-    </> */}
