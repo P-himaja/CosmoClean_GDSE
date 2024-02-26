@@ -19,35 +19,24 @@ const getMenuItems = () => {
       url: '/',
     },
     {
-      title: 'Resources',
-      submenu: [
-        {
-        title: 'Research',
-        url: 'research',
-        }
-      ]
-    },
+      title: 'Research',
+      url: 'research',
+        },
     {
         title: 'Analytics',
-        url: 'analytics',
+        url: 'predictionform',
     },
     {
       title: 'Chat',
       url: 'chat',
     },
-    {
-      title: 'Predict',
-      url: 'predictionform',
-    },     
-    {
-      title: 'Social',
-      submenu: [
+      
+      
         {
           title: 'Blogs',
           url: 'blogs',
         },
-      ],
-    },
+    
     {
       title: 'Contact',
       submenu: [

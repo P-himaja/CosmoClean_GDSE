@@ -11,7 +11,6 @@ import Volunteer from "../pages/Volunteer";
 import ContactUs from "../pages/ContactUs";
 import SignUp from "../pages/SignUp";
 import Selectmenu from "../pages/Research";
-import Analytics from "../pages/analytics";
 import Chat from "../pages/chat";
 import PredictionForm from "../pages/predictionform";
 import Community from "../pages/Community";
@@ -51,7 +50,6 @@ const App = () => {
           <Route path="sign-up" element={<SignUp />} />
           <Route path="createpost" element={<CreatePost isAuth={isAuth} />} />
           <Route path="login" element={<Login setIsAuth={setIsAuth} />} />
-          <Route path="analytics" element={<Analytics />}/>
           <Route path="predictionform" element= {<PredictionForm/>}/>
           <Route path="chat" element={<Chat />}/>
           <Route path="community" element={<Community />}/>

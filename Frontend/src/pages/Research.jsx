@@ -2,16 +2,15 @@ import { useState } from 'react';
 import Select from 'react-select';
 import graphA from '../images/graph1.png';
 import graphB from '../images/graph2.jpg';
-import graphC from '../images/graph3.png';
+import graphC from '../images/graph2.png';
+import graphD from '../images/output3.png';
 import analytics from '../images/analysis.png';
 
 const options = [
   
-  { value: "option1", label: "Option 1" },
-  { value: 'option2', label: 'Option 2' },
-  { value: 'option3', label: 'Option 3' },
-  { value: 'option4', label: 'Option 4' },
-  { value: 'option5', label: 'Option 5' },
+  { value: "option1", label: "Number of Debris Launches over the years" },
+  { value: 'option2', label: 'Top 10 Countries for no of debris in orbits' },
+  { value: 'option3', label: 'RCS Size distribution of Debris' },
 ];
 
 function Selectmenu() {
@@ -27,12 +26,16 @@ function Selectmenu() {
         setGraph2(graphB);
         break;
       case 'option2':
-        setGraph1(graphB);
-        setGraph2(graphC);
+        setGraph1(graphC);
+        setGraph2(graphB);
         break;
+      // case 'option3':
+      //   setGraph1(graphC);
+      //   setGraph2(graphA);
+      //   break;
       // Add cases for other options if needed
       default:
-        setGraph1(graphA);
+        setGraph1(graphD);
         setGraph2(graphB);
         break;
     }
@@ -92,7 +95,7 @@ function Selectmenu() {
         <div style={{ width: "500px", border: "1px solid gray", borderRadius: "2rem", display: "flex", justifyContent: "space-around", padding: "2rem" }}>
           <div className="data-text" >
             <p style={{ color: "white", fontWeight: "500", fontSize: "26px" }}>Reliable Database</p>
-            <p style={{ color: "rgba(255, 255, 255, 0.6)", fontSize: "1.1em" }}>These Graphs show  the space debris contribution of each country based on data collected by NASA, and other such reputed organization</p>
+            <p style={{ color: "rgba(255, 255, 255, 0.6)", fontSize: "1.1em" }}>These Graphs show  the space debris contribution of each country based on data collected by NASA, and other such reputed organization Deez NULLS</p>
           </div>
           <img src={analytics} alt="asteroid" className="analysis-image" />
         </div>
@@ -100,6 +103,7 @@ function Selectmenu() {
       <div style={{ display: 'flex', gap: "2rem", flexDirection: "column" }}>
         <div className="pic1"><img src={graph1} alt="Graph 1" style={{ width: '450px', marginRight: '10px', marginTop: "30px", borderRadius: "10px", border: "1px solid grey" }} /></div>
         <div className="pic2"><img src={graph2} alt="Graph 2" style={{ width: '450px', marginRight: '10px', borderRadius: "10px", border: "1px solid grey" }} /></div>
+        {/* <div className="pic3"><img src={graph1} alt="Graph 3"> style={{width: '450px', marginRight: '10px', borderRadius: "10px", border: "1px solid grey"}}</img></div> */}
       </div>
       <div></div>
     </div>
